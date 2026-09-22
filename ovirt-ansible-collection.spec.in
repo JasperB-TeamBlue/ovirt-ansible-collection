@@ -55,6 +55,13 @@ This Ansible collection is to manage all ovirt modules and inventory
 %prep
 %setup -c -q
 
+# Fix ambiguous python shebangs (e.g. #!/usr/bin/env python) in the executable
+# disaster recovery scripts. Must run AFTER %setup so the unpacked source tree
+# exists; build.sh install copies these files into the buildroot as-is.
+%py3_shebang_fix \
+    roles/disaster_recovery/files \
+    roles/disaster_recovery/files/ovirt-dr
+
 %build
 
 %install

@@ -1,0 +1,3 @@
+---
+bugfixes:
+  - Sanity fix for ambiguous python shebangs in the disaster recovery scripts. (see https://github.com/oVirt/ovirt-ansible-collection/pull/796)

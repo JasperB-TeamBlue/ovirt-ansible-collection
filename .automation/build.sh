@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/bin/bash -eux
 
 ROOT_PATH="$PWD"
 BUILD_ROOT_PATH="/tmp"
